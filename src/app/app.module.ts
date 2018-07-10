@@ -9,6 +9,8 @@ import { routing } from './app.routes';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { HttpModule } from '@angular/http';
 import { SearchService } from './resources/search.service';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { MenuComponent } from './restaurant-detail/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SearchService } from './resources/search.service';
     HeaderComponent,
     AboutComponent,
     RestaurantsComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    RestaurantDetailComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

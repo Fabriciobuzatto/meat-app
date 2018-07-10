@@ -11,15 +11,26 @@ import { map } from 'rxjs/operators';
 })
 export class RestaurantsComponent implements OnInit {
 
+  loader = true;
   restaurants: Restaurant[];
 
   constructor(private $searchService: SearchService) {
   }
 
   showRestaurants() {
+
     this.$searchService.getRestaurants().subscribe( subGetRestaurants => {
       this.restaurants = subGetRestaurants;
-    });    
+      this.loader = false;  
+    }, 
+    error => { 
+      console.error(error);
+      alert(error.statusText);
+      this.loader = false; 
+    }
+    
+  ); 
+
   }
 
   ngOnInit() {

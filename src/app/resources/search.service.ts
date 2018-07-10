@@ -21,4 +21,10 @@ export class SearchService {
     );
   }
 
+  restaurantById(id: string): Observable<Restaurant> {
+    return this.http.get(`http://localhost:3000/restaurants/${id}`).pipe(
+      map(response => response.json())
+    );      
+  }
+
 }

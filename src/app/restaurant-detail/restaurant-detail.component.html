@@ -1,0 +1,42 @@
+<div class="container" *ngIf="!restaurantView">Loading...</div>
+<div class="container" *ngIf="restaurantView">
+
+  <div class="card">
+    <div class="card-header">
+      {{ restaurantView.name }}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ restaurantView.imagePath }}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <h5 class="card-title">Categoria</h5>
+          <p class="card-text">{{ restaurantView.category }}</p>
+          <h5 class="card-title">Quem Somos</h5>
+          <p class="card-text">{{ restaurantView.about }}</p>
+          <h5 class="card-title">Horário</h5>
+          <p class="card-text">{{ restaurantView.hours }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs mt-2">
+    <li class="nav-item w-50">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item w-50">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+
+  <div class="row">
+    
+    <meat-menu></meat-menu>
+    
+  </div>
+
+</div>
+
