@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { SearchService } from '../../resources/search.service';
+import { MenuItem } from '../menu-item/menu-item.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'meat-menu',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  menu: Observable<MenuItem[]>
 
-  ngOnInit() {
+  constructor(private SearchService: SearchService, private route: ActivatedRoute) {
+    
   }
+  
+  ngOnInit() {
+    this.menu = this.SearchService.menuOfRestaurant(this.route.snapshot.params['restaurantUrl']);
+  }
+
+  // addMenuItem(item: MenuItem){
+  //   console.log(item);
+  // }
 
 }

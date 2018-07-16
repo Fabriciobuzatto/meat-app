@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 import { SearchService } from './resources/search.service';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { MenuComponent } from './restaurant-detail/menu/menu.component';
+import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MenuComponent } from './restaurant-detail/menu/menu.component';
     RestaurantsComponent,
     RestaurantComponent,
     RestaurantDetailComponent,
-    MenuComponent
+    MenuComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,

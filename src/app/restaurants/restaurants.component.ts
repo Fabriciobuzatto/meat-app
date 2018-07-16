@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../resources/search.service';
-import {Restaurant} from "../restaurants/restaurant/restaurant.model"
+import { Restaurant } from "../restaurants/restaurant/restaurant.model"
 
 import { map } from 'rxjs/operators';
 
